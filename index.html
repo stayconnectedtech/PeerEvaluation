@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <title>Student Reflection & Peer Evaluation Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 25px 35px 35px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 0;
+      }
+
+      h2 {
+        margin-top: 25px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 4px;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 12px;
+      }
+
+      input[type="text"],
+      input[type="date"],
+      textarea,
+      select {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px 8px;
+        margin-top: 4px;
+        font-family: inherit;
+      }
+
+      textarea {
+        min-height: 70px;
+        resize: vertical;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      th, td {
+        border: 1px solid #ccc;
+        padding: 6px;
+        text-align: left;
+        font-size: 0.9rem;
+      }
+
+      th {
+        background-color: #e6e6e6;
+      }
+
+      .small-input {
+        width: 70px;
+      }
+
+      .button-row {
+        text-align: center;
+        margin-top: 25px;
+      }
+
+      button {
+        padding: 10px 18px;
+        font-size: 1rem;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+      }
+
+      button[type="submit"] {
+        background-color: #1976d2;
+        color: white;
+      }
+
+      button[type="reset"] {
+        margin-left: 10px;
+        background-color: #777;
+        color: white;
+      }
+
+      #status {
+        margin-top: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Reflection &amp; Peer Evaluation Form</h1>
+
+      <form id="reflectionForm">
+        <!-- Basic Info -->
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" name="studentName" required>
+
+        <label for="course">Course / Section</label>
+        <input type="text" id="course" name="course">
+
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date">
+
+        <!-- Part 1 -->
+        <h2>Part 1: Self-Reflection</h2>
+
+        <label for="role">
+          1. Which role did you play in your group project?
+        </label>
+        <textarea id="role" name="role"></textarea>
+
+        <label for="functions">
+          2. How did you apply the four functions of management
+          (Planning, Organizing, Leading, Controlling) in your role?
+        </label>
+        <textarea id="functions" name="functions"></textarea>
+
+        <label for="bigConcept">
+          3. What was the biggest management concept you learned from this project?
+        </label>
+        <textarea id="bigConcept" name="bigConcept"></textarea>
+
+        <!-- Part 2 -->
+        <h2>Part 2: Peer Evaluation</h2>
+        <p>Rate each teammate on a scale of 1–5 (1 = low, 5 = high).</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Teammate Name</th>
+              <th>Contribution (1–5)</th>
+              <th>Communication (1–5)</th>
+              <th>Collaboration (1–5)</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 5 rows; students can leave unused rows blank -->
+            <!-- Row 1 -->
+            <tr>
+              <td><input type="text" name="teammateName1"></td>
+              <td><input type="number" class="small-input" name="contribution1" min="1" max="5"></td>
+              <td><input type="number" class="small-input" name="communication1" min="1" max="5"></td>
+              <td><input type="number" class="small-input" name="collaboration1" min="1" max="5"></td>
+              <td><input type="text" name="comments1"></td>
+            </tr>
+            <!-- Row 2 -->
+            <tr>
+              <td><input type="text" name="teammateName2"></td>
+              <td><input type="number" class="small-input" name="contribution2" min="1" max="5"></td>
+              <td><input type="number" class="small-input" name="communication2" min="1" max="5"></td>
+              <td><input type="number" class="small-input" name="collaboration2" min="1" max="5"></td>
+              <td><input type="text" name="comments2"></td>
+            </tr>
+            <!-- Row 3 -->
+            <tr>
+              <td><input type="text" name="teammateName3"></td>
+              <td><input type="number" class="small-input" name="contribution3" min="1" max="5"></td>
+              <td><input type="number" class="small-input" name="communication3" min="1" max="5"></td>
+              <td><input type="number" class="small-input" name="collaboration3" min="1" max="5"></td>
+              <td><input type="text" name="comments3"></td>
+            </tr>
+            <!-- Row 4 -->
+            <tr>
+              <td><input type="text" name="teammateName4"></td>
+              <td><input type="number" class="small-input" name="contribution4" min="1" max="5"></td>
+              <td><input type="number" class="small-input" name="communication4" min="1" max="5"></td>
+              <td><input type="number" class="small-input" name="collaboration4" min="1" max="5"></td>
+              <td><input type="text" name="comments4"></td>
+            </tr>
+            <!-- Row 5 -->
+            <tr>
+              <td><input type="text" name="teammateName5"></td>
+              <td><input type="number" class="small-input" name="contribution5" min="1" max="5"></td>
+              <td><input type="number" class="small-input" name="communication5" min="1" max="5"></td>
+              <td><input type="number" class="small-input" name="collaboration5" min="1" max="5"></td>
+              <td><input type="text" name="comments5"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Part 3 -->
+        <h2>Part 3: Overall Project Experience</h2>
+
+        <label for="enjoyMost">
+          1. What did you enjoy most about this project?
+        </label>
+        <textarea id="enjoyMost" name="enjoyMost"></textarea>
+
+        <label for="challenges">
+          2. What challenges did you face, and how did you overcome them?
+        </label>
+        <textarea id="challenges" name="challenges"></textarea>
+
+        <label for="improvements">
+          3. How can this project be improved for future classes?
+        </label>
+        <textarea id="improvements" name="improvements"></textarea>
+
+        <div class="button-row">
+          <button type="submit">Submit</button>
+          <button type="reset">Clear Form</button>
+        </div>
+
+        <div id="status"></div>
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById('reflectionForm');
+      const statusDiv = document.getElementById('status');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        statusDiv.textContent = 'Saving...';
+
+        const formData = new FormData(form);
+        const data = {};
+
+        formData.forEach((value, key) => {
+          data[key] = value;
+        });
+
+        google.script.run
+          .withSuccessHandler(function (result) {
+            if (result && result.success) {
+              statusDiv.textContent = 'Form submitted and PDF saved to Drive.';
+              form.reset();
+            } else {
+              statusDiv.textContent = 'Form submitted, but there was an issue saving.';
+            }
+          })
+          .withFailureHandler(function (err) {
+            statusDiv.textContent = 'Error: ' + err.message;
+          })
+          .processForm(data);
+      });
+    </script>
+  </body>
+</html>
